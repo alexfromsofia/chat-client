@@ -27,6 +27,7 @@ export default class App extends React.PureComponent {
 
     this.handleAddMessage = this.handleAddMessage.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitKeyUp = this.handleSubmitKeyUp.bind(this);
   }
 
   handleAddMessage(message) {
@@ -82,15 +83,18 @@ export default class App extends React.PureComponent {
 
   renderChatWindow() {
     return (
-      <div>
-        { this.renderMessages() }
+      [
+        <div key="chat-window" className="chat-window">
+          { this.renderMessages() }
+        </div>,
         <Submit
+          key="chat-window-submit-inner"
           onClick={ this.handleSubmit }
           refNode={ this.chatMessageInputRef }
           placeholder="Type your message here..."
           onKeyUp={ this.handleSubmitKeyUp }
         />
-      </div>
+      ]
     )
   }
 

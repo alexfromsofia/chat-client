@@ -5,7 +5,7 @@ export default class Submit extends React.PureComponent {
     const { onClick, onKeyUp, refNode, placeholder } = this.props;
 
     return (
-      <section className="chat-submit">
+      <section className="chat-submit-wrapper">
         <input
           className="chat-input"
           ref={ refNode } type="text"
@@ -13,7 +13,7 @@ export default class Submit extends React.PureComponent {
           onKeyUp={onKeyUp}
         />
         <button
-          className="chat-submit"
+          className="chat-submit-button"
           onClick={ onClick }>
           Send
         </button>

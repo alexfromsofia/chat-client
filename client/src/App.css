@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -34,4 +40,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Chat section */
+.chat-wrapper {
+  display: flex;
+  height: calc(100vh - 100px);
+  flex-direction: column;
+  position: relative;
+}
+
+.chat-window {
+  padding: 20px;
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+
+/* Chat submit section */
+.chat-submit-wrapper {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 0 10px 0 #000;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 15px;
+  font-size: 1em;
+}
+
+.chat-submit-button {
+  width: 200px;
+  font-size: 1em;
+}
+
+
+/* Chat message section */
+.message-container {
+  margin-top: 10px;
+}
+
+.message-container:first-of-type {
+  margin-top: 0;
 }
